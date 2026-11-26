@@ -1,9 +1,10 @@
 """Listio Pinterest piny 1000x1500 – generator (Lora + Poppins, mobily se snimky z videi)."""
 import subprocess, os, csv
 from PIL import Image
-F = "/mnt/user-data/uploads/Downloads/Listio-piny-nove/_frames/"
-D = "/mnt/user-data/uploads/Downloads/"
-OUT = "/home/claude/listio/out2"; os.makedirs(OUT, exist_ok=True)
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+F = REPO + "/zdroje/frames/"   # snimky obrazovek pozvanek z videi
+D = REPO + "/zdroje/"          # fotky planovace a rozlucky
+OUT = REPO + "/out"            # vystup (negituje se); os.makedirs(OUT, exist_ok=True)
 
 TH = {
  "green": dict(bg="radial-gradient(ellipse at 50% 45%, #1f6b3f 0%, #0f3d24 70%)", fg="#fbf6ea", acc="#d9b768", pill="#d9b768", pillfg="#173d26"),
