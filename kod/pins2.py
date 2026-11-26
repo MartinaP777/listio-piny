@@ -4,7 +4,7 @@ from PIL import Image
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F = REPO + "/zdroje/frames/"   # snimky obrazovek pozvanek z videi
 D = REPO + "/zdroje/"          # fotky planovace a rozlucky
-OUT = REPO + "/out"            # vystup (negituje se); os.makedirs(OUT, exist_ok=True)
+OUT = REPO + "/out"; os.makedirs(OUT, exist_ok=True)  # vystup (neni v gitu)
 
 TH = {
  "green": dict(bg="radial-gradient(ellipse at 50% 45%, #1f6b3f 0%, #0f3d24 70%)", fg="#fbf6ea", acc="#d9b768", pill="#d9b768", pillfg="#173d26"),
